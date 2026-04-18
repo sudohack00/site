@@ -4,7 +4,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('/images/background.jpg') center/cover no-repeat fixed;
+    background: url('/site/images/background.jpg') center/cover no-repeat fixed;
     font-family: Arial, sans-serif;
     color: white;
 }

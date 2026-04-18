@@ -10,16 +10,16 @@ body {
 }
 
 .main {
-    position: fixed;      /* фиксируем блок относительно окна */
-    top: 15px;            /* отступ сверху */
-    left: 20px;           /* отступ слева */
-    display: flex;        /* располагаем элементы в строку */
-    gap: 25px;            /* расстояние между ссылками */
+    position: fixed;
+    top: 15px;
+    left: 20px;
+    display: flex;
+    gap: 25px;
 }
 
 .main a {
-    text-decoration: none; /* убираем подчёркивание */
-    color: #c573ff;           /* цвет текста */
+    text-decoration: none;
+    color: #c573ff;
 }
 
 .pony-card {

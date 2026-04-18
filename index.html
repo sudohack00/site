@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>SudoHack</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main">
+    <a href="/skin">my skin for pony town</a>
+    <a href="https://t.me/Sudo_hack0">my telegram channel</a>
+</div>
+
+<div class="discord-card" id="discord-status">Загрузка...</div>
+
+<script>
+const userId = "902872784085057558"; // вставь сюда свой Discord ID
+
+async function loadStatus() {
+    const container = document.getElementById("discord-status");
+    container.innerHTML = "<p>Загрузка...</p>";
+
+    try {
+        const res = await fetch(`https://api.lanyard.rest/v1/users/${userId}`);
+        const json = await res.json();
+
+        if(!json.success) throw new Error("Пользователь не отслеживается");
+
+        const data = json.data;
+        const activities = data.activities.length > 0 ? data.activities[0].name : "Ничего не делает";
+        const status = data.discord_status;
+
+        container.innerHTML = `
+            <img src="https://cdn.discordapp.com/avatars/${userId}/${data.discord_user.avatar}.png" alt="Аватар">
+            <h2>${data.discord_user.username}</h2>
+            <p>Status: <span class="status ${status}">${status}</span></p>
+            <p>${activities}</p>
+        `;
+    } catch(err) {
+        console.warn(err);
+        container.innerHTML = `
+            <img src="https://cdn.discordapp.com/embed/avatars/0.png" alt="Аватар">
+            <h2>Offline</h2>
+            <p>Status: <span class="status offline">Offline</span></p>
+            <p>Activity: Нет</p>
+        `;
+    }
+}
+
+loadStatus();
+</script>
+
+</body>
+</html>

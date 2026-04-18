@@ -1,0 +1,56 @@
+body {
+    margin: ;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/images/background.jpg') center/cover no-repeat fixed;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.main {
+    position: fixed;      /* фиксируем блок относительно окна */
+    top: 15px;            /* отступ сверху */
+    left: 20px;           /* отступ слева */
+    display: flex;        /* располагаем элементы в строку */
+    gap: 25px;            /* расстояние между ссылками */
+}
+
+.main a {
+    text-decoration: none; /* убираем подчёркивание */
+    color: #c573ff;           /* цвет текста */
+}
+
+.pony-card {
+    
+    font-weight: bold;
+    width: 200px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pony-card:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.pony-card img {
+    width: 200px;
+    border-radius: 100%;
+    margin-bottom: -10px;
+}
+
+.pony-card h2 {
+    margin: 10px 0 5px 0;
+}
+
+.pony-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}

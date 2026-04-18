@@ -1,0 +1,68 @@
+body {
+    background: url('images/Background.jpg') center/cover no-repeat fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: ;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.main {
+    position: fixed;      /* фиксируем блок относительно окна */
+    top: 15px;            /* отступ сверху */
+    left: 20px;           /* отступ слева */
+    display: flex;        /* располагаем элементы в строку */
+    gap: 25px;            /* расстояние между ссылками */
+}
+
+.main a {
+    text-decoration: none; /* убираем подчёркивание */
+    color: #c573ff;           /* цвет текста */
+}
+
+
+.discord-card {
+    font-weight: bold;
+    width: 280px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.discord-card:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.discord-card img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: -10px;
+}
+
+.discord-card h2 {
+    margin: 10px 0 5px 0;
+}
+
+.discord-card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.status.online { color: #56db9e; }
+.status.idle { color: #ffb842; }
+.status.dnd { color: #ff7088; }
+.status.offline { color: #ffffff; }
+
+.main h1{
+    text-align: left;
+}
